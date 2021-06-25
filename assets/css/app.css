@@ -1,0 +1,58 @@
+/* This file is for your main application css. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak],
+[hidden] {
+  display: none !important;
+}
+
+.menu-button-content {
+  min-width: 180px;
+}
+
+@screen lg {
+  .lg\:min-w-xl {
+    min-width: 260px;
+  }
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom right, theme('colors.brand.100'), theme('colors.brand.200'), theme('colors.brand.300'), theme('colors.brand.400'), theme('colors.brand.500'));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-gradient--page {
+  background-image: radial-gradient(circle at -5% 35%,
+      theme('colors.brand.300'),
+      rgba(theme('colors.brand.200'), 0) 50%),
+    radial-gradient(circle at 90% 0%, theme('colors.brand.100'), rgba(theme('colors.brand.200'), 0) 70%),
+    radial-gradient(circle at 90% 100%, theme('colors.brand.500'), rgba(theme('colors.brand.200'), 0) 80%),
+    linear-gradient(theme('colors.brand.200'), theme('colors.brand.200'));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.phx-click-loading {
+  opacity: 0.5;
+  transition: opacity 1s ease-out;
+}
+
+.phx-disconnected {
+  cursor: wait;
+}
+
+.phx-disconnected * {
+  pointer-events: none;
+}
+
+
+/*=================
+Popovers
+=================*/
+
+.popover {
+  @apply hidden;
+}
